@@ -91,12 +91,6 @@ A premium version is planned, which will offer additional subscription-based pai
 - A Spigot, Paper, Folia, or Fabric server environment. *For more details.
 
 
-## Resources
-
-- For documentation and examples visit the [Wiki](https://github.com/GrimAnticheat/Grim/wiki).
-- For answers to commonly asked questions visit the [FAQ](https://github.com/GrimAnticheat/Grim/wiki/FAQ).
-- For community support and project discussion join our [Discord](https://discord.grim.ac).
-
 ## Pull Requests
 
 See [Contributing](CONTRIBUTING.md) for more information about contributing and what our guidelines
