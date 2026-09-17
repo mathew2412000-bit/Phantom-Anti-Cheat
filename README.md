@@ -2,17 +2,14 @@
  <h1>Phantom Anti-Cheat</h1>
 
  <div>
-  <a href="https://github.com/GrimAnticheat/Grim/actions/workflows/gradle-publish.yml">
    <img alt="Workflow" src="https://img.shields.io/github/actions/workflow/status/GrimAnticheat/Grim/gradle-publish.yml?style=flat&logo=github"/>
   </a>&nbsp;&nbsp;
-  <a href="https://modrinth.com/plugin/phantomac">
    <img alt="Modrinth" src="https://img.shields.io/modrinth/v/LJNGWSvH?style=flat&label=version&logo=modrinth">
   </a>&nbsp;&nbsp;
-  <a href="https://modrinth.com/plugin/phantomac#download">
    <img alt="Downloads" src="https://img.shields.io/modrinth/dt/LJNGWSvH?style=flat&logo=modrinth&label=downloads&link=https%3A%2F%2Fmodrinth.com%2Fplugin%2Fgrimac%23download">
   </a>&nbsp;&nbsp;
   <a href="https://discord.grim.ac">
-   <img alt="Discord" src="https://img.shields.io/discord/811396969670901800?style=flat&label=discord&logo=discord">
+
   </a>
  </div>
 
