@@ -6,7 +6,7 @@
   </a>&nbsp;&nbsp;
    <img alt="Modrinth" src="https://img.shields.io/modrinth/v/LJNGWSvH?style=flat&label=version&logo=modrinth">
   </a>&nbsp;&nbsp;
-   <img alt="Downloads" src="https://img.shields.io/modrinth/dt/LJNGWSvH?style=flat&logo=modrinth&label=downloads&link=https%3A%2F%2Fmodrinth.com%2Fplugin%2Fgrimac%23download">
+ 
   </a>&nbsp;&nbsp;
   <a href="https://discord.grim.ac">
 
