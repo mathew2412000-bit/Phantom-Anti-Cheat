@@ -52,16 +52,6 @@ A premium version is planned, which will offer additional subscription-based pai
 - **Customizable Messages** - Full MiniMessage support for alert formatting
 - **Discord Integration** - Built-in Discord webhook support for alerts
 
-## Downloads
-
-- Latest updates:
-  - **[Modrinth](https://modrinth.com/plugin/phantomac)** *(recommended)*
-  - GitHub
-  artifacts: [Bukkit](https://nightly.link/GrimAnticheat/Grim/workflows/gradle-publish/2.0/phantomac-bukkit.zip), [Fabric](https://nightly.link/GrimAnticheat/Grim/workflows/gradle-publish/2.0/phantomac-fabric.zip) *(bleeding edge)*
-- Major releases only:
-  - ~~[Hangar](https://hangar.papermc.io/GrimAnticheat/GrimAnticheat)~~
-  - ~~[SpigotMC](https://www.spigotmc.org/resources/phantom-anticheat.99923/)~~
-
 ## Commands
 
 ### Player Commands
@@ -97,25 +87,9 @@ A premium version is planned, which will offer additional subscription-based pai
 
 ## Requirements & Installation
 
-- Java 17 or higher. *For more details, see [Updating-to-Java-17](https://github.com/GrimAnticheat/Grim/wiki/Updating-to-Java-17).*
-- A Spigot, Paper, Folia, or Fabric server environment. *For more details, see [Supported-environments](https://github.com/GrimAnticheat/Grim/wiki/Supported-environments).*
+- Java 17 or higher. *For more details.
+- A Spigot, Paper, Folia, or Fabric server environment. *For more details.
 
-## Branding
-
-Phantom Anti-Cheat is a rebranded version of GrimAC with the following changes:
-- **Name**: Phantom Anti-Cheat
-- **Commands**: `/phantom` and `/phantomac`
-- **Permissions**: `phantom.*` namespace
-- **Theme**: Purple color scheme (#9B59B6)
-- **Alert Formatting**: Bold text with professional styling
-- **Console Branding**: Phantom labels in console output
-
-**Note**: Internal Java packages remain as `ac.grim.grimac` for compatibility with the underlying detection engine and existing integrations.
-
-If you use a proxy such as Velocity or Bungeecord:
-- If you use Geyser, Floodgate must be installed on the backend server (where Grim is) so Grim can access the Floodgate API.
-- If you use ViaVersion, it must be installed on the backend server (where Grim is) ONLY.
-  Grim does not support having ViaVersion installed on the proxy, even if it is also installed on the backend.
 
 ## Resources
 
@@ -127,12 +101,6 @@ If you use a proxy such as Velocity or Bungeecord:
 
 See [Contributing](CONTRIBUTING.md) for more information about contributing and what our guidelines
 are.
-
-## Developer Plugin API
-
-Grim's plugin API allows you to integrate Grim into your own plugins. Visit
-the [plugin API repository](https://github.com/GrimAnticheat/GrimAPI) for the source code and more
-information.
 
 ## Compiling From Source
 
@@ -219,16 +187,9 @@ Phantom Anti-Cheat is designed for high-performance servers:
 - **Low Overhead** - Minimal impact on server TPS
 - **Efficient Caching** - Chunk compression (16-64 KB per chunk)
 
-## License
-
-This project is a derivative of GrimAC and is subject to the GNU GPL v3 license. See [LICENSE](LICENSE) for details.
-
-**Original Project**: [GrimAnticheat/Grim](https://github.com/GrimAnticheat/Grim)
-**Phantom Rebrand**: Maintained by the Phantom Anti-Cheat team
-
 ## Acknowledgments
 
-- **GrimAC Team** - For the original anti-cheat implementation
 - **PacketEvents** - For the excellent packet handling library
 - **PaperMC** - For the Spigot/Paper server software
 - **ViaVersion** - For cross-version compatibility support
+- **OWNER** - qk9xz discord | qk9xz
