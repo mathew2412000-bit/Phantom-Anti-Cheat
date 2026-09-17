@@ -1,161 +1,237 @@
 <div align="center">
+ <h1>Phantom Anti-Cheat</h1>
 
-# 👻 Phantom Anti-Cheat
+ <div>
+  <a href="https://github.com/GrimAnticheat/Grim/actions/workflows/gradle-publish.yml">
+   <img alt="Workflow" src="https://img.shields.io/github/actions/workflow/status/GrimAnticheat/Grim/gradle-publish.yml?style=flat&logo=github"/>
+  </a>&nbsp;&nbsp;
+  <a href="https://modrinth.com/plugin/phantomac">
+   <img alt="Modrinth" src="https://img.shields.io/modrinth/v/LJNGWSvH?style=flat&label=version&logo=modrinth">
+  </a>&nbsp;&nbsp;
+  <a href="https://modrinth.com/plugin/phantomac#download">
+   <img alt="Downloads" src="https://img.shields.io/modrinth/dt/LJNGWSvH?style=flat&logo=modrinth&label=downloads&link=https%3A%2F%2Fmodrinth.com%2Fplugin%2Fgrimac%23download">
+  </a>&nbsp;&nbsp;
+  <a href="https://discord.grim.ac">
+   <img alt="Discord" src="https://img.shields.io/discord/811396969670901800?style=flat&label=discord&logo=discord">
+  </a>
+ </div>
 
-### Advanced Simulation-Based Anti-Cheat for Minecraft Servers
+> **Phantom Anti-Cheat** is a rebranded derivative of the open-source GrimAC project.
+> Original project: GrimAnticheat/Grim. This derivative remains subject to the GNU GPL v3 license included in `LICENSE`.
 
-[![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://opensource.org/licenses/GPL-3.0)
-[![Minecraft](https://img.shields.io/badge/Minecraft-1.8--26.2-green.svg)](https://www.spigotmc.org/)
-[![Platform](https://img.shields.io/badge/Platform-Paper%20%7C%20Spigot%20%7C%20Folia-orange.svg)](https://papermc.io/)
-[![Java](https://img.shields.io/badge/Java-25-red.svg)](https://www.oracle.com/java/)
-[![Version](https://img.shields.io/badge/Version-2.3.74-purple.svg)](https://github.com/your-repo/phantom-anticheat)
-
-**A powerful, libre simulation-based anti-cheat designed for Minecraft servers.**
+ <br>
 </div>
 
----
+Phantom Anti-Cheat is an open source Minecraft anticheat designed to support the latest versions of Minecraft.
+It currently supports minecraft versions 1.8–26.2. Geyser players are fully exempt from the anticheat to prevent false positives.
+This project is considered feature-complete for the 2.0 (open-source) branch. If you would like a bug fix or enhancement and cannot sponsor the work, pull requests are welcome.
+A premium version is planned, which will offer additional subscription-based paid checks, such as heuristics.
 
 ## ✨ Features
 
-### 🎯 Advanced Detection System
+### Advanced Detection Engine
+- **Movement Simulation Engine** - 1:1 replication of player movements including walking, swimming, knockback, cobwebs, and bubble columns
+- **Entity Riding Support** - Supports riding entities from boats to pigs to striders
+- **Version Compatibility** - Supports 1.13+ clients on 1.13+ servers, 1.12- clients on 1.13+ servers, and cross-version combinations
+- **Collision Accuracy** - Accounts for minor bounding box differences between versions (e.g., glass pane hitboxes)
+- **Full World Replication** - Per-player world replica for lag compensation and multithreaded design
+- **Latency Compensation** - World changes queued until they reach the player
+- **Inventory Tracking** - Prevents ghost blocks at high latency
 
-| Feature | Description |
-|---------|-------------|
-| **Simulation-Based Detection** | Advanced packet analysis and movement simulation for accurate cheat detection |
-| **Comprehensive Checks** | Combat, Movement, Exploit, and Player checks covering all major cheat types |
-| **Real-Time Alerts** | Instant notifications via Discord and in-game with detailed violation information |
-| **Detailed History** | Track violations over time with session data and statistical analysis |
-| **Customizable** | Extensive configuration options for fine-tuning detection sensitivity |
+### Staff Tools & Administration
+- **Check Management** - Enable/disable specific checks with `/phantom checks`, `/phantom enable <check>`, `/phantom disable <check>`
+- **Player Monitoring** - `/phantom sus` to view all monitored players
+- **Watchlist System** - `/phantom watch <player>` to track suspicious players, `/phantom watchlist` to view watchlist
+- **Alert System** - Configurable alerts with cooldown (5 seconds per player) to prevent spam
+- **Staff Notifications** - Console alerts when watched players join
+- **Profile Command** - `/phantom profile <player>` for detailed player information
+- **Session History** - `/phantom history <player>` to view violation history
+- **Spectate Mode** - `/phantom spectate <player>` to watch players
 
-### 🛡️ Detection Categories
+### Enhanced Features
+- **Bold Alert Formatting** - Professional styling with bold text and Phantom branding
+- **Purple Theme** - Consistent purple color scheme throughout (no blue)
+- **Alert Cooldown** - 5-second cooldown between alerts per player to prevent spam
+- **Customizable Messages** - Full MiniMessage support for alert formatting
+- **Discord Integration** - Built-in Discord webhook support for alerts
 
-#### Combat Checks
-- ✅ Aimbot detection
-- ✅ Killaura analysis
-- ✅ AutoClicker detection
-- ✅ Reach violations
-- ✅ Critical hits analysis
-- ✅ NoSwing detection
+## Downloads
 
-#### Movement Checks
-- ✅ Fly detection
-- ✅ Speed violations
-- ✅ NoFall analysis
-- ✅ Step exploits
-- ✅ Knockback abnormalities
-- ✅ Sprint exploits
-- ✅ Velocity violations
+- Latest updates:
+  - **[Modrinth](https://modrinth.com/plugin/phantomac)** *(recommended)*
+  - GitHub
+  artifacts: [Bukkit](https://nightly.link/GrimAnticheat/Grim/workflows/gradle-publish/2.0/phantomac-bukkit.zip), [Fabric](https://nightly.link/GrimAnticheat/Grim/workflows/gradle-publish/2.0/phantomac-fabric.zip) *(bleeding edge)*
+- Major releases only:
+  - ~~[Hangar](https://hangar.papermc.io/GrimAnticheat/GrimAnticheat)~~
+  - ~~[SpigotMC](https://www.spigotmc.org/resources/phantom-anticheat.99923/)~~
 
-#### Exploit Checks
-- ✅ NoClip detection
-- ✅ Scaffold analysis
-- ✅ Timer exploits
-- ✅ Block exploits
-- ✅ Liquid exploits
-- ✅ Ghost hand detection
+## Commands
 
-#### Player Checks
-- ✅ BadPackets analysis
-- ✅ Invalid Sneak
-- ✅ AutoSprint detection
-- ✅ Transaction packets
-- ✅ Flying packets
+### Player Commands
+- `/phantom alerts` - Toggle alerts on/off
+- `/phantom verbose` - Toggle verbose mode (shows every flag)
+- `/phantom brands` - Toggle brand notifications
+- `/phantom profile <player>` - View detailed player information (ping, version, brand, sensitivity)
+- `/phantom spectate <player>` - Spectate a player
+- `/phantom stopspectating` - Return to previous location
 
-### 🎨 Phantom Branding
+### Admin Commands
+- `/phantom sus` - List all monitored players
+- `/phantom checks` - List all detection checks with status
+- `/phantom enable <check>` - Enable a specific check
+- `/phantom disable <check>` - Disable a specific check
+- `/phantom watch <player>` - Add player to watchlist
+- `/phantom unwatch <player>` - Remove player from watchlist
+- `/phantom watchlist` - View all watched players
+- `/phantom reload` - Reload configuration
+- `/phantom history <player>` - View session history
+- `/phantom history <player> session <N|latest>` - View detailed session information
+- `/phantom debug <player>` - Developer prediction output
+- `/phantom perf` - Developer ms/prediction stats
+- `/phantom log [0-255]` - Upload debug log for prediction flags
 
-- **🟣 Purple Theme**: Beautiful ghost-themed purple branding throughout
-- **🎭 Custom Discord Integration**: Full webhook support with purple embeds and custom logos
-- **👥 Staff Menu**: GUI-based moderation tools with intuitive interface
-- **🎨 Professional UI**: Clean, modern interface with hover information
-- **🌍 Multi-language Support**: English, Spanish, French, Portuguese
+### Permissions
+- `phantom.alerts` - Receive alerts
+- `phantom.verbose` - Receive verbose alerts
+- `phantom.sus` - View monitored players
+- `phantom.spectate` - Spectate players
+- `phantom.admin` - Admin commands (enable/disable checks, watchlist)
+- `phantom.whitelist` - Exempt from anti-cheat (renamed from phantom.exempt)
 
-### 🔧 Advanced Features
+## Requirements & Installation
 
-- **🔄 Folia Compatible**: Full support for regionalized servers
-- **⚡ Async Processing**: Most checks run asynchronously for minimal impact
-- **💾 Efficient Caching**: Optimized data structures for low memory usage
-- **🎯 Per-Player Settings**: Individual configuration for exempt players
-- **📊 Performance Metrics**: Built-in performance monitoring
-- **🔍 Debug Tools**: Comprehensive verbose mode for troubleshooting
+- Java 17 or higher. *For more details, see [Updating-to-Java-17](https://github.com/GrimAnticheat/Grim/wiki/Updating-to-Java-17).*
+- A Spigot, Paper, Folia, or Fabric server environment. *For more details, see [Supported-environments](https://github.com/GrimAnticheat/Grim/wiki/Supported-environments).*
 
----
+## Branding
 
-## 🎯 Why Phantom?
+Phantom Anti-Cheat is a rebranded version of GrimAC with the following changes:
+- **Name**: Phantom Anti-Cheat
+- **Commands**: `/phantom` and `/phantomac`
+- **Permissions**: `phantom.*` namespace
+- **Theme**: Purple color scheme (#9B59B6)
+- **Alert Formatting**: Bold text with professional styling
+- **Console Branding**: Phantom labels in console output
 
-| Feature | Phantom | Other Anti-Cheats |
-|---------|---------|------------------|
-| **Simulation-Based** | ✅ Advanced packet simulation | ❌ Often flag-based |
-| **Open Source** | ✅ Fully libre (GPLv3) | ❌ Often proprietary |
-| **Active Development** | ✅ Regular updates | ⚠️ Varies |
-| **Discord Integration** | ✅ Native support | ⚠️ Requires plugins |
-| **Staff GUI** | ✅ Built-in menu | ❌ Rare |
-| **Purple Theme** | ✅ Beautiful branding | ⚠️ Generic |
-| **Folia Support** | ✅ Full support | ❌ Limited |
-| **Performance** | ✅ Optimized | ⚠️ Varies |
-| **Customization** | ✅ Extensive | ⚠️ Limited |
-| **Documentation** | ✅ Comprehensive | ⚠️ Basic |
+**Note**: Internal Java packages remain as `ac.grim.grimac` for compatibility with the underlying detection engine and existing integrations.
 
----
+If you use a proxy such as Velocity or Bungeecord:
+- If you use Geyser, Floodgate must be installed on the backend server (where Grim is) so Grim can access the Floodgate API.
+- If you use ViaVersion, it must be installed on the backend server (where Grim is) ONLY.
+  Grim does not support having ViaVersion installed on the proxy, even if it is also installed on the backend.
 
-## 📋 Requirements
+## Resources
 
-### Server Requirements
-- **Minecraft Version**: 1.8–26.2
-- **Server Platform**: Paper, Spigot, or Folia
-- **Java Version**: 25 or higher
-- **RAM**: Minimum 2GB (4GB+ recommended)
+- For documentation and examples visit the [Wiki](https://github.com/GrimAnticheat/Grim/wiki).
+- For answers to commonly asked questions visit the [FAQ](https://github.com/GrimAnticheat/Grim/wiki/FAQ).
+- For community support and project discussion join our [Discord](https://discord.grim.ac).
 
-### Required Dependencies
-- **PacketEvents** 2.0+ (automatically included)
+## Pull Requests
 
-### Optional Dependencies
-- **ProtocolLib** - Enhanced packet handling
-- **ViaVersion** - Cross-version support
-- **LuckPerms** - Permission management
-- **PlaceholderAPI** - Placeholder support
-- **Database Drivers** (MySQL, PostgreSQL, MongoDB, SQLite)
+See [Contributing](CONTRIBUTING.md) for more information about contributing and what our guidelines
+are.
 
----
+## Developer Plugin API
 
-## 🚀 Installation
+Grim's plugin API allows you to integrate Grim into your own plugins. Visit
+the [plugin API repository](https://github.com/GrimAnticheat/GrimAPI) for the source code and more
+information.
 
-### Quick Start
+## Compiling From Source
 
-1. **Download the Plugin**
-   ```bash
-   # Download the latest release
-   wget https://github.com/your-repo/phantom-anticheat/releases/latest/PhantomAntiCheat-2.3.74.jar
-   ```
+1. `git clone https://github.com/Axionize/PhantomAntiCheat`
+2. `cd PhantomAntiCheat`
+3. `./gradlew build`
+4. The final jars will compile into the `<platform>/build/libs` folders
 
-2. **Install on Your Server**
-   ```bash
-   # Place the JAR in your plugins folder
-   cp PhantomAntiCheat-2.3.74.jar /path/to/server/plugins/
-   ```
+## Phantom Detection Engine
 
-3. **Restart Your Server**
-   ```bash
-   # Restart to load the plugin
-   ./restart.sh
-   ```
+What makes Phantom stand out against other anticheats?
 
-4. **Configure the Plugin**
-   ```bash
-   # Edit the configuration
-   nano plugins/PhantomAntiCheat/config.yml
-   ```
+### Movement Simulation Engine
 
-5. **Set Up Discord Webhooks**
-   ```bash
-   # Configure Discord integration
-   nano plugins/PhantomAntiCheat/discord.yml
-   ```
+* We have a 1:1 replication of the player's possible movements
+    * This covers everything from basic walking, swimming, knockback, cobwebs, to bubble columns
+    * It even covers riding entities from boats to pigs to striders
+* Built upon covering edge cases to confirm accuracy
+* 1.13+ clients on 1.13+ servers, 1.12- clients on 1.13+ servers, 1.13+ clients on 1.12- servers,
+  and 1.12- clients on 1.12- servers are all supported regardless of the large technical changes
+  between these versions.
+* The order of collisions depends on the client version and is correct
+* Accounts for minor bounding box differences between versions, for example:
+    * Single glass panes will be a + shape for 1.7-1.8 players and * for 1.9+ players
+    * 1.13+ clients on 1.8 servers see the + glass pane hitbox due to ViaVersion
+    * Many other blocks have this extreme attention to detail.
+    * Waterlogged blocks do not exist for 1.12 or below players
+    * Blocks that do not exist in the client's version use ViaVersion's replacement block
+    * Block data that cannot be translated to previous versions is replaced correctly
+    * All vanilla collision boxes have been implemented
 
-### Verification
+### Fully asynchronous and multithreaded design
 
-Check if the plugin loaded successfully:
-```bash
-# In server console
-/phantom version
+* All movement checks and the overwhelming majority of listeners run on the netty thread
+* The anticheat can scale to many hundreds of players, if not more
+* Thread safety is carefully thought out
+* The next core allows for this design
 
-made by qk9lxz
+### Full world replication
+
+* The anticheat keeps a replica of the world for each player
+* The replica is created by listening to chunk data packets, block places, and block changes
+* On all versions, chunks are compressed to 16-64 kb per chunk using palettes
+* Using this cache, the anticheat can safely access the world state
+* Per player, the cache allows for multithreaded design
+* Sending players fake blocks with packets is safe and does not lead to falses
+* The world is recreated for each player to allow lag compensation
+* Client sided blocks cause no issues with packet based blocks. Block glitching does not false the
+  anticheat.
+
+### Latency compensation
+
+* World changes are queued until they reach the player
+* This means breaking blocks under a player does not false the anticheat
+* Everything from flying status to movement speed will be latency compensated
+
+### Inventory compensation
+
+* The player's inventory is tracked to prevent ghost blocks at high latency, and other errors
+
+### Secure by design, not obscurity
+
+* All systems are designed to be highly secure and mathematically impossible to bypass
+* For example, the prediction engine knows all possible movements and cannot be bypassed
+
+## Configuration
+
+Phantom Anti-Cheat uses a comprehensive configuration system with support for:
+- **Punishment Groups** - Configure automatic punishments based on violation thresholds
+- **Check Configuration** - Enable/disable specific checks and adjust their sensitivity
+- **Alert Settings** - Customize alert formatting, colors, and cooldown times
+- **Discord Integration** - Configure webhooks for alerts
+- **Data Storage** - SQLite, MySQL, PostgreSQL, MongoDB, and Redis support
+- **History System** - Track player sessions and violations over time
+
+Configuration files are located in the `plugins/PhantomAntiCheat/` directory after the first run.
+
+## Performance
+
+Phantom Anti-Cheat is designed for high-performance servers:
+- **Fully Asynchronous** - All movement checks run on the netty thread
+- **Multithreaded Design** - Scales to hundreds of players
+- **Thread Safety** - Carefully designed to prevent race conditions
+- **Low Overhead** - Minimal impact on server TPS
+- **Efficient Caching** - Chunk compression (16-64 KB per chunk)
+
+## License
+
+This project is a derivative of GrimAC and is subject to the GNU GPL v3 license. See [LICENSE](LICENSE) for details.
+
+**Original Project**: [GrimAnticheat/Grim](https://github.com/GrimAnticheat/Grim)
+**Phantom Rebrand**: Maintained by the Phantom Anti-Cheat team
+
+## Acknowledgments
+
+- **GrimAC Team** - For the original anti-cheat implementation
+- **PacketEvents** - For the excellent packet handling library
+- **PaperMC** - For the Spigot/Paper server software
+- **ViaVersion** - For cross-version compatibility support
